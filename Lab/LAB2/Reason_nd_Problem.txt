@@ -1,0 +1,6 @@
+*Reason to use Double Buffer in the code::
+#Earlier in our display function, we used single buffer, so in each iteration, buffer was cleared, mathematical values to be displayed changed and flush() will push everything to screen. But in the event when we were drawing it, what if even before our animation takes complete form and proper shape, our time for new frame to be displayed has reached? In such a scenario, an incomplete sequence of picture will be given to screen in every iteration, thus we used the functionality of double buffer, which in-turn uses a method of swapping buffers instead of flushing the buffer to screen.
+
+Problem:
+While circle will appear only when mouse is clicked, but I couldn't do it where the x and y coordinates of click were to be taken as center of the circle, while I was able to register the click's coordinates but those coordinates were little off than where I was actually clicking. So the center of circle coordinates were taken input in runtime but the values of those coordinates were not accurate.
+ 
